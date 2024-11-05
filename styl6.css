@@ -1,0 +1,45 @@
+body{
+    font-family: Georgia;
+}
+#panele{
+    display: flex;
+}
+#l{
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+}
+#p{
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+}
+#pp{
+    display: flex;
+}
+footer{
+    background-color: dimgray;
+    color: white;
+}
+p{
+    padding: 10px;
+}
+img{
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white; 
+}
+#c1{
+    background-color: Indigo;
+}
+#c2{
+    background-color: SteelBlue;
+}
+#c3{
+    background-color: Olive;
+
+}

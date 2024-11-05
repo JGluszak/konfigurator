@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Style w JavaScript</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styl6.css'>
+    <script>
+        function tlo1(){
+            document.getElementById("p").style.backgroundColor="Indigo"
+        }
+        function tlo2(){
+            document.getElementById("p").style.backgroundColor="SteelBlue"
+        }
+        function tlo3(){
+            document.getElementById("p").style.backgroundColor="Olive"
+        }
+        function cz(){
+            let c=document.getElementById('slc').value
+            document.getElementById('p').style.color=c
+        }
+        function rozmiar()
+        {
+            let g=formularz.rozmiarcz.value
+            document.getElementById('p').style.fontSize=g
+        }
+        function ramka(){
+            if (document.getElementById('ram').checked) 
+            {
+                document.getElementById('img').style.border="1px solid white"
+            }
+            else
+            {
+                document.getElementById('img').style.border="none"
+            }
+        }
+        function radio1()
+        {
+            if (document.getElementById('r1').checked) 
+            {
+                document.getElementById('li1').style.listStyle="disc"
+            }
+        }
+        function radio2()
+        {
+            if (document.getElementById('r1').checked) 
+            {
+                document.getElementById('li1').style.listStyle="square"
+            }
+        }
+        function radio3()
+        {
+            if (document.getElementById('r1').checked) 
+            {
+                document.getElementById('li1').style.listStyle="circle"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="panele">
+        <div id="l">
+            <h1>Konfigurator stylu</h1>
+            <form name="formularz">
+                <p>Podaj kolor tła:</p> <br>
+                <input type="button" value="Indigo" id="c1" onclick="tlo1()">
+                <input type="button" value="SteelBlue" id="c2" onclick="tlo2()">
+                <input type="button" value="Olive" id="c3" onclick="tlo3()">
+
+                <p>Podaj kolor czcionki</p>
+                <select id="slc" onchange="cz()">
+                    <option value="White">White</option>
+                    <option value="Tan">Tan</option>
+                    <option value="Bisque">Bisque</option>
+                    <option value="Plum">Plum</option>
+                </select>
+
+                <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+                <input type="text" value="100%" name="rozmiarcz" onchange="rozmiar()">
+
+                <p>Czy rysunek ma mieć ramkę?</p>
+                <input type="checkbox" checked id="ram" onchange="ramka()">Rysuj ramkę
+
+                <p>Jaki jest typ punktora listy?</p>
+                <input type="radio" name="rad" id="r1" onchange="radio1()">dysk<br>
+                <input type="radio" name="rad" id="r1" onchange="radio2()">kwadrat<br>
+                <input type="radio" name="rad" id="r1" onchange="radio3()">okrąg<br>
+            </form>
+        </div>
+        <div id="p">
+            <div id="pp">
+                <img src="gibraltar.jpg" alt="półwysep Gibraltar" id="img">
+                <ul>
+                    <li id="li1">element 1</li>
+                    <li id="li1">element 2</li>
+                    <li id="li1">element 3</li>
+                </ul>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </div>
+    </div>
+    <footer>
+        Autor: 000000000
+    </footer>
+</body>
+</html>
